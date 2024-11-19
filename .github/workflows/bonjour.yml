@@ -17,6 +17,6 @@ jobs:
       id : readme
       uses: juliangruber/read-file-action@v1
       with:
-        path: README.md
+        path: ./README.md
     - name: Echo readme
       run: cat readme
