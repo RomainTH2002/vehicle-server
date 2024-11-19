@@ -18,5 +18,5 @@ jobs:
       uses: juliangruber/read-file-action@v1
       with:
         path: ./README.md
-    - name: Echo readme
-      run: cat readme
+    - name: cat README.md
+      run: echo "${{ steps.readme.outputs.content }}"
