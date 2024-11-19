@@ -7,4 +7,8 @@ jobs:
     steps:
       - run: echo "Bonjour 👋"
       - run: ls -l
-      - run: cat README.rd
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            README.md
+          sparse-checkout-cone-mode: false
