@@ -8,5 +8,5 @@ jobs:
       - run: echo "Bonjour 👋"
       - run: ls -l
       - uses: actions/checkout@v4
-      - run : README.md
+      - run : cat README.md
            
