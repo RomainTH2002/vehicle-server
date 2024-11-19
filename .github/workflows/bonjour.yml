@@ -4,9 +4,6 @@ on:
 jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
-    container:
-        image: ghcr.io/cicd-lectures/gitpod:latest
-        options: --user=root
     steps:
     - name: cowsay test
       uses: Code-Hex/neo-cowsay-action@v1
