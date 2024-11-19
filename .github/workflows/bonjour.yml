@@ -5,6 +5,8 @@ jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
     - name: cowsay test
       uses: Code-Hex/neo-cowsay-action@v1
       with:
@@ -15,6 +17,6 @@ jobs:
       id : readme
       uses: juliangruber/read-file-action@v1
       with:
-        path: ./README.md
+        path: README.md
     - name: Echo readme
       run: cat readme
