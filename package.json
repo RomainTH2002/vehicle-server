@@ -1,0 +1,26 @@
+{
+  "name": "vehicle-server",
+  "version": "1.0.0",
+  "description": "### Requirements",
+  "main": "index.js",
+  "scripts": {
+   "build": "rm -rf ./dist && tsc",
+    "start": "npm run build && node dist/index.js",
+    "start-db": "docker container run -d -name vehicle-database -e POSTGRES_USER=vehicle -e POSTGRES_PASSWORD=vehicle -e POSTGRES_DB=vehicle -p 5432:5432 postgis/postgis:16-3.4-alpine",
+    "stop-db": "docker container rm -f vehicle-database"
+  },
+  "author": "rt",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
+    "express": "^5.0.1",
+    "pg": "^8.13.1",
+    "save-dev": "^0.0.1-security"
+  }
+  
+}
