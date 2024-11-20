@@ -1,6 +1,7 @@
 name : vehicle-server
 on : 
   - push
+  - pull_request
 jobs:
     init_projet:
         runs-on: ubuntu-22.04
@@ -11,3 +12,4 @@ jobs:
               node-version: 20.17
           - run: npm ci
           - run: npm run build
+        
