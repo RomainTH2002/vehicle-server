@@ -38,7 +38,7 @@ export class CreateVehicleController {
 function validateRequestPayload(req: CreateVehiclePayload): string[] {
   const violations :string[] = []
 
-  if (req.shortcode.length != 6) {
+  if (req.shortcode.length != 4) {
     violations.push("Shortcode must be only 4 characters long");
   }
 
